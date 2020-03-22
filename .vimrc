@@ -63,11 +63,14 @@ nnoremap gb :ls<CR>:b<Space>
 set hidden
 nnoremap gn :NERDTreeToggle<CR>
 set autoindent
-"inoremap "" ""<left>
-"inoremap '' ''<left>
-"inoremap (( ()<left>
-"inoremap [[ []<left>
-"inoremap {{ {}<left>
+inoremap "" ""<left>
+inoremap '' ''<left>
+inoremap (( ()<left>
+inoremap [[ []<left>
+inoremap {{ {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap (<CR> (<CR>)<ESC>O
+inoremap [<CR> [<CR>]<ESC>O
 let mapleader = "ö"
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
 nnoremap <Leader>f :vim /<C-r><C-w>/ ** \| copen<CR>
@@ -82,42 +85,6 @@ nnoremap <Leader>h <C-6>
 nnoremap <Leader>j :cclose<CR>
 nnoremap <Leader>J :lclose<CR>
 vnoremap <Leader>j <C-c>
-lnoremap º<CR> {<CR>}<ESC>O<TAB>
-lnoremap ®<CR> (<CR>)<ESC>O<TAB>
-lnoremap ƒ<CR> [<CR>]<ESC>O<TAB>
-lnoremap ®® ()<left>
-lnoremap ƒƒ []<left>
-lnoremap ºº {}<left>
-lnoremap ªª ""<left>
-lnoremap ª "
-lnoremap ƒ [
-lnoremap © ]
-lnoremap º {
-lnoremap ∆ }
-lnoremap ® (
-lnoremap † )
-onoremap iƒ i[
-onoremap aƒ a[
-onoremap i® i(
-onoremap a® a(
-onoremap iº i{
-onoremap aº a{
-onoremap iª i"
-onoremap aª a"
-vnoremap iƒ i[
-vnoremap aƒ a[
-vnoremap i® i(
-vnoremap a® a(
-vnoremap iº i{
-vnoremap aº a{
-vnoremap iª i"
-vnoremap aª a"
-nmap º [m
-nmap ∆ ]m
-nmap ø [[
-nmap π ]]
-set iminsert=1
-"set imcmdline
 let g:ctrlp_working_path_mode = 'rwa'
 let g:pymode_options_max_line_length = 88
 let g:pymode_lint_options_pep8 = {'max_line_length': g:pymode_options_max_line_length}
